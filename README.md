@@ -1,2 +1,1 @@
 # admin-panel-finder
-asımmmm
