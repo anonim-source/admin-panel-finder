@@ -16,7 +16,7 @@ fake = UserAgent()
 header = {'User-Agent': fake.random}
 for  i in dosya_r:
     try:
-        r = requests.get(link + "/" + i, headers=header)
+        r = requests.get("http://"+link + "/" + i, headers=header)
         c = r.url
         a = r.status_code
         if a == 200:
@@ -27,6 +27,6 @@ for  i in dosya_r:
         else:
             print(Fore.LIGHTWHITE_EX+"bulunamadı >",i)
             
-    except:
+    except KeyboardInterrupt:
         print("sitemden cıkıldı ")
         break
